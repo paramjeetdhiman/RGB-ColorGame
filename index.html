@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>RGB-ColorGame</h1>
+    <header class="jumbotron text-center bg-info">
+      <h4>THE GREAT</h4>
+      <h1>
+        RGB(<span id="red">255</span>, <span id="green">255</span>,<span
+          id="blue"
+          >255</span
+        >)
+      </h1>
+      <h4>GUESSING GAME</h4>
+    </header>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-light justify-content-around">
+      <a class="nav-link active" href="#">NEW COLORS</a>
+
+      <div class="navbar">
+        <a class="nav-link" href="#">EASY</a>
+        <a class="nav-link" href="#">HARD</a>
+      </div>
+    </nav>
+
+    <!-- grids -->
+    <div id="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
     <!-- Scripts -->
     <script src="js/jquery.js.js"></script>
     <script src="js/popper.js"></script>

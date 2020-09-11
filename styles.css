@@ -1,8 +1,38 @@
 body {
-  padding: 0;
-  margin: 0;
+  background: #232323;
+}
+.jumbotron {
+  margin-bottom: 0;
+}
+
+header h4 {
+  color: #fff;
+  line-height: 2em;
+  font-weight: bold;
 }
 
 h1 {
-  background: #eee;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+nav a {
+  color: #212;
+  font: bold 14px monospace;
+  border: 1px solid #222;
+  margin-right: 5px;
+}
+
+.square {
+  width: 30%;
+  padding-bottom: 30%;
+  background: #333;
+  margin: 1.66%;
+  border-radius: 1em;
+  float: left;
+}
+
+#container {
+  margin: 30px auto;
+  max-width: 600px;
 }
