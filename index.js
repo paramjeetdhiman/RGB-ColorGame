@@ -1,10 +1,26 @@
 let colors = generateRandomColors(6);
-
 let squares = document.querySelectorAll('.square');
 let pickedColor = pickColor();
 let colorDisplay = document.querySelector('#colorDisplay');
 let message = document.querySelector('#message');
 let header = document.querySelector('.jumbotron');
+let resetBtn = document.querySelector('#reset');
+
+resetBtn.addEventListener('click', () => {
+  //generte all new colors
+  colors = generateRandomColors(6);
+  //pick a new random colors
+  pickedColor = pickColor();
+  //change color display to match picked color
+  colorDisplay.textContent = pickedColor;
+  // change colors of squares
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].style.background = colors[i];
+  }
+  resetBtn.textContent = 'NEW COLORS';
+  header.style.background = '#3aaa6d';
+  message.textContent = '';
+});
 colorDisplay.textContent = pickedColor;
 
 for (let i = 0; i < squares.length; i++) {
@@ -22,6 +38,7 @@ for (let i = 0; i < squares.length; i++) {
       message.textContent = 'Correct';
       changeColors(clickedColor);
       header.style.background = clickedColor;
+      resetBtn.textContent = 'Play Again?';
     } else {
       message.textContent = 'Try Again';
       this.style.background = '#232323';

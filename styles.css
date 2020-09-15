@@ -16,8 +16,9 @@ h1 {
   font-weight: bold;
 }
 
-nav {
-  background: rgb(20, 220, 153);
+.navbar {
+  background: #d8e9e3;
+  padding: 0.2rem 1rem;
 }
 nav a {
   color: #222;
