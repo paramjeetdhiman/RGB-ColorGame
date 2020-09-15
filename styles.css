@@ -45,6 +45,7 @@ nav a:hover {
   margin: 1.66%;
   border-radius: 1em;
   float: left;
+  transition: background 0.5s;
 }
 
 #container {

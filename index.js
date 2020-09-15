@@ -88,7 +88,7 @@ for (let i = 0; i < squares.length; i++) {
     console.log(clickedColor, pickedColor);
     if (clickedColor === pickedColor) {
       message.textContent = 'Correct';
-      message.style.background = '#3aaa6d';
+      message.style.background = '#3aaa6d'; 
       changeColors(clickedColor);
       header.style.background = clickedColor;
       resetBtn.textContent = 'Play Again?';
