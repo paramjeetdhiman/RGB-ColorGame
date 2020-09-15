@@ -1,18 +1,20 @@
 body {
   background: #232323;
+  margin: 0;
+  font-family: monospace;
 }
 .jumbotron {
   margin-bottom: 0;
   background: #3aaa6d;
 }
-header h4 {
-  color: #fff;
+header h4,
+h2 {
+  color: #ffffffe0;
   line-height: 2em;
   font-weight: bold;
 }
 
 h1 {
-  font-family: monospace;
   font-weight: bold;
 }
 

@@ -32,6 +32,7 @@ easyBtn.addEventListener('click', () => {
   header.style.background = '#3aaa6d';
   message.textContent = '';
 });
+
 hardBtn.addEventListener('click', () => {
   easyBtn.classList.remove('selected');
   hardBtn.classList.add('selected');
@@ -52,6 +53,7 @@ hardBtn.addEventListener('click', () => {
   header.style.background = '#3aaa6d';
   message.textContent = '';
 });
+
 resetBtn.addEventListener('click', () => {
   //generte all new colors
   colors = generateRandomColors(numSquares);
@@ -67,6 +69,7 @@ resetBtn.addEventListener('click', () => {
   header.style.background = '#3aaa6d';
   message.textContent = '';
 });
+
 colorDisplay.textContent = pickedColor;
 
 for (let i = 0; i < squares.length; i++) {
