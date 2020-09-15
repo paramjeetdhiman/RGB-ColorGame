@@ -1,14 +1,60 @@
-let colors = generateRandomColors(6);
+let numSquares = 6;
+let colors = generateRandomColors(numSquares);
 let squares = document.querySelectorAll('.square');
 let pickedColor = pickColor();
 let colorDisplay = document.querySelector('#colorDisplay');
 let message = document.querySelector('#message');
 let header = document.querySelector('.jumbotron');
 let resetBtn = document.querySelector('#reset');
+let easyBtn = document.querySelector('#easy');
+let hardBtn = document.querySelector('#hard');
 
+easyBtn.addEventListener('click', () => {
+  hardBtn.classList.remove('selected');
+  easyBtn.classList.add('selected');
+  //generte all new colors
+  numSquares = 3;
+  colors = generateRandomColors(numSquares);
+  //pick a new random colors
+  pickedColor = pickColor();
+
+  //change color display to match picked color
+  colorDisplay.textContent = pickedColor;
+  // change colors of squares
+  for (let i = 0; i < squares.length; i++) {
+    if (colors[i]) {
+      squares[i].style.background = colors[i];
+    } else {
+      squares[i].style.display = 'none';
+    }
+  }
+  resetBtn.textContent = 'NEW COLORS';
+  header.style.background = '#3aaa6d';
+  message.textContent = '';
+});
+hardBtn.addEventListener('click', () => {
+  easyBtn.classList.remove('selected');
+  hardBtn.classList.add('selected');
+  //generte all new colors
+  numSquares = 6;
+  colors = generateRandomColors(numSquares);
+  //pick a new random colors
+  pickedColor = pickColor();
+
+  //change color display to match picked color
+  colorDisplay.textContent = pickedColor;
+  // change colors of squares
+  for (let i = 0; i < squares.length; i++) {
+    squares[i].style.background = colors[i];
+    squares[i].style.display = 'block';
+  }
+  resetBtn.textContent = 'NEW COLORS';
+  header.style.background = '#3aaa6d';
+  message.textContent = '';
+});
 resetBtn.addEventListener('click', () => {
   //generte all new colors
-  colors = generateRandomColors(6);
+  colors = generateRandomColors(numSquares);
   //pick a new random colors
   pickedColor = pickColor();
   //change color display to match picked color
@@ -64,7 +110,7 @@ function generateRandomColors(num) {
   //make an array
   const colors = [];
   //add num random colors to array
-  for (let i = 0; i <= num; i++) {
+  for (let i = 1; i <= num; i++) {
     colors.push(randomColors());
   }
   //retrun array

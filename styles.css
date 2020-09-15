@@ -21,14 +21,18 @@ h1 {
   padding: 0.2rem 1rem;
 }
 nav a {
-  color: #222;
   font: bold 14px monospace;
   border: 1px solid #222;
   margin-right: 5px;
+  color: #222;
 }
-nav a:hover {
+nav #reset:hover {
   background: #222;
   color: yellow;
+}
+nav a:hover {
+  color: white;
+  background: crimson;
 }
 
 .square {
@@ -50,5 +54,10 @@ nav a:hover {
   text-transform: uppercase;
   background: crimson;
   padding: 0px 5px;
+  color: white;
+}
+
+.selected {
+  background: crimson;
   color: white;
 }
