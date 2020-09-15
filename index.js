@@ -31,6 +31,7 @@ easyBtn.addEventListener('click', () => {
   resetBtn.textContent = 'NEW COLORS';
   header.style.background = '#3aaa6d';
   message.textContent = '';
+  message.style.background = '';
 });
 
 hardBtn.addEventListener('click', () => {
@@ -52,6 +53,7 @@ hardBtn.addEventListener('click', () => {
   resetBtn.textContent = 'NEW COLORS';
   header.style.background = '#3aaa6d';
   message.textContent = '';
+  message.style.background = '';
 });
 
 resetBtn.addEventListener('click', () => {
@@ -68,6 +70,7 @@ resetBtn.addEventListener('click', () => {
   resetBtn.textContent = 'NEW COLORS';
   header.style.background = '#3aaa6d';
   message.textContent = '';
+  message.style.background = '';
 });
 
 colorDisplay.textContent = pickedColor;
@@ -85,6 +88,7 @@ for (let i = 0; i < squares.length; i++) {
     console.log(clickedColor, pickedColor);
     if (clickedColor === pickedColor) {
       message.textContent = 'Correct';
+      message.style.background = '#3aaa6d';
       changeColors(clickedColor);
       header.style.background = clickedColor;
       resetBtn.textContent = 'Play Again?';
