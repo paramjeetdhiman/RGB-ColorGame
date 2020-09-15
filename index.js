@@ -1,16 +1,10 @@
-const colors = [
-  'rgb(255, 0, 0)',
-  'rgb(255, 255, 0)',
-  'rgb(0, 255, 0)',
-  'rgb(0, 255, 255)',
-  'rgb(0, 0, 255)',
-  'rgb(255, 0, 255)',
-];
+let colors = generateRandomColors(6);
 
 let squares = document.querySelectorAll('.square');
 let pickedColor = pickColor();
 let colorDisplay = document.querySelector('#colorDisplay');
 let message = document.querySelector('#message');
+let header = document.querySelector('.jumbotron');
 colorDisplay.textContent = pickedColor;
 
 for (let i = 0; i < squares.length; i++) {
@@ -23,9 +17,11 @@ for (let i = 0; i < squares.length; i++) {
     //compare color to picked square
 
     const clickedColor = this.style.background;
+    console.log(clickedColor, pickedColor);
     if (clickedColor === pickedColor) {
       message.textContent = 'Correct';
       changeColors(clickedColor);
+      header.style.background = clickedColor;
     } else {
       message.textContent = 'Try Again';
       this.style.background = '#232323';
@@ -45,4 +41,22 @@ function pickColor() {
   //pick a random color
   const random = Math.floor(Math.random() * colors.length);
   return colors[random];
+}
+
+function generateRandomColors(num) {
+  //make an array
+  const colors = [];
+  //add num random colors to array
+  for (let i = 0; i <= num; i++) {
+    colors.push(randomColors());
+  }
+  //retrun array
+  return colors;
+}
+
+function randomColors() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`;
 }

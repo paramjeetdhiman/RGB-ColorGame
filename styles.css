@@ -3,8 +3,8 @@ body {
 }
 .jumbotron {
   margin-bottom: 0;
+  background: #3aaa6d;
 }
-
 header h4 {
   color: #fff;
   line-height: 2em;
@@ -16,15 +16,18 @@ h1 {
   font-weight: bold;
 }
 
+nav {
+  background: rgb(20, 220, 153);
+}
 nav a {
-  color: #212;
+  color: #222;
   font: bold 14px monospace;
   border: 1px solid #222;
   margin-right: 5px;
 }
 nav a:hover {
-  background: #444;
-  color: lime;
+  background: #222;
+  color: yellow;
 }
 
 .square {
