@@ -22,6 +22,10 @@ nav a {
   border: 1px solid #222;
   margin-right: 5px;
 }
+nav a:hover {
+  background: #444;
+  color: lime;
+}
 
 .square {
   width: 30%;
@@ -35,4 +39,12 @@ nav a {
 #container {
   margin: 30px auto;
   max-width: 600px;
+}
+
+#message {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: crimson;
+  padding: 0px 5px;
+  color: white;
 }

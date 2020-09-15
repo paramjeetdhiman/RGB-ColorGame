@@ -10,19 +10,20 @@
   <body>
     <header class="jumbotron text-center bg-info">
       <h4>THE GREAT</h4>
-      <h1>
+      <!-- <h1>
         RGB(<span id="red">255</span>, <span id="green">255</span>,<span
           id="blue"
           >255</span
         >)
-      </h1>
+      </h1> -->
+      <h1><span id="colorDisplay">RGB</span></h1>
       <h4>GUESSING GAME</h4>
     </header>
 
     <!-- navbar -->
     <nav class="navbar navbar-light bg-light justify-content-around">
       <a class="nav-link active" href="#">NEW COLORS</a>
-
+      <span id="message"></span>
       <div class="navbar">
         <a class="nav-link" href="#">EASY</a>
         <a class="nav-link" href="#">HARD</a>
@@ -40,9 +41,10 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/jquery.js.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
+  
