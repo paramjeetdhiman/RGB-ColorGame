@@ -1,4 +1,5 @@
 ## RGB-COLOR GAME
+https://randomrgbgame.netlify.app
 
 [<img src="./img/Screenshot-1.png" />]()
 
